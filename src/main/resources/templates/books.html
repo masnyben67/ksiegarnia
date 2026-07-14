@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Księgarnia</title>
+
+
+<style>
+
+
+body{
+
+font-family: Arial;
+
+margin:30px;
+
+}
+
+
+table{
+
+border-collapse: collapse;
+
+width:70%;
+
+}
+
+
+
+td,th{
+
+border:1px solid #ccc;
+
+padding:10px;
+
+}
+
+
+th{
+
+background:#eee;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+<h2>Księgarnia Internetowa</h2>
+
+
+<p>
+
+<a href="/login">
+Zaloguj się
+</a>
+
+</p>
+
+
+
+<table>
+
+
+<tr>
+
+<th>Tytuł</th>
+
+<th>Cena</th>
+
+<th>Kategoria</th>
+
+</tr>
+
+
+
+
+<tr th:each="book:${books}">
+
+
+<td th:text="${book.title}"></td>
+
+
+<td th:text="${book.price} + ' zł'"></td>
+
+
+<td th:text="${book.category}"></td>
+
+
+</tr>
+
+
+</table>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Koszyk</title>
+
+
+<style>
+
+body{
+
+font-family:Arial;
+
+margin:30px;
+
+}
+
+
+table{
+
+border-collapse:collapse;
+
+width:70%;
+
+}
+
+
+td,th{
+
+border:1px solid #ccc;
+
+padding:10px;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<h2>Twój koszyk</h2>
+
+
+
+<table>
+
+
+<tr>
+
+<th>Książka</th>
+
+<th>Cena</th>
+
+<th>Ilość</th>
+
+</tr>
+
+
+
+<tr th:each="item:${cart.items}">
+
+
+<td th:text="${item.book.title}"></td>
+
+
+<td th:text="${item.book.price} + ' zł'"></td>
+
+
+<td th:text="${item.quantity}"></td>
+
+
+
+</tr>
+
+
+</table>
+
+
+
+
+<h3>
+
+Wartość:
+
+<span th:text="${result.subtotal}"></span>
+
+zł
+
+</h3>
+
+
+
+<h3>
+
+Rabat:
+
+<span th:text="${result.discount}"></span>
+
+zł
+
+</h3>
+
+
+
+
+<h2>
+
+Do zapłaty:
+
+<span th:text="${result.total}"></span>
+
+zł
+
+</h2>
+
+
+
+
+<p>
+
+Promocja:
+
+<span th:text="${result.promotion}"></span>
+
+
+</p>
+
+
+
+<a href="/books">
+
+Wróć do książek
+
+</a>
+
+
+</body>
+
+
+</html>

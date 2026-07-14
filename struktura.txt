@@ -3,14 +3,59 @@ ksiegarnia-online
 ├── pom.xml
 │
 └── src
-    └── main
-        ├── java
-        │   └── pl
-        │       └── ksiegarnia
-        │           └── online
-        │               └── KsiegarniaApplication.java
-        │
-        └── resources
-            ├── application.properties
-            ├── static
-            └── templates
+    │
+    ├── main
+    │   │
+    │   ├── java/pl/ksiegarnia/online
+    │   │   │
+    │   │   ├── KsiegarniaApplication.java
+    │   │   │
+    │   │   ├── model
+    │   │   │   ├── Book.java
+    │   │   │   ├── Order.java
+    │   │   │   ├── OrderItem.java
+    │   │   │   └── OrderStatus.java
+    │   │   │
+    │   │   ├── repository
+    │   │   │   ├── BookRepository.java
+    │   │   │   └── OrderRepository.java
+    │   │   │
+    │   │   ├── service
+    │   │   │   ├── BookService.java
+    │   │   │   ├── CartCalculatorService.java
+    │   │   │   ├── CartSessionService.java
+    │   │   │   └── OrderService.java
+    │   │   │
+    │   │   ├── cart
+    │   │   │   ├── Cart.java
+    │   │   │   ├── CartItem.java
+    │   │   │   └── DiscountResult.java
+    │   │   │
+    │   │   ├── controller
+    │   │   │   ├── HomeController.java
+    │   │   │   ├── BookController.java
+    │   │   │   ├── CartController.java
+    │   │   │   ├── CartPageController.java
+    │   │   │   └── OrderController.java
+    │   │   │
+    │   │   ├── dto
+    │   │   │   └── CartCalculationResponse.java
+    │   │   │
+    │   │   └── config
+    │   │       ├── SecurityConfig.java
+    │   │       ├── DataInitializer.java
+    │   │       └── OpenApiConfig.java
+    │   │
+    │   └── resources
+    │       │
+    │       ├── templates
+    │       │   ├── books.html
+    │       │   ├── cart.html
+    │       │   └── order-success.html
+    │       │
+    │       └── application.properties
+    │
+    └── test
+        └── java
+            └── pl/ksiegarnia/online/service
+                └── CartCalculatorServiceTest.java

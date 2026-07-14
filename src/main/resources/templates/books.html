@@ -82,6 +82,8 @@ Zaloguj się
 
 <th>Kategoria</th>
 
+<th></th>
+
 </tr>
 
 
@@ -97,6 +99,17 @@ Zaloguj się
 
 
 <td th:text="${book.category}"></td>
+
+
+<td>
+
+<a th:href="@{/cart/add/{id}(id=${book.id})}">
+
+Dodaj
+
+</a>
+
+</td>
 
 
 </tr>

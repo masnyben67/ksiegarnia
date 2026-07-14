@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Zamówienie</title>
+
+</head>
+
+
+<body>
+
+
+<h2>
+
+Zamówienie zostało złożone!
+
+</h2>
+
+
+
+
+<p>
+
+Numer zamówienia:
+
+<span th:text="${order.id}"></span>
+
+</p>
+
+
+
+<p>
+
+Data:
+
+<span th:text="${order.date}"></span>
+
+</p>
+
+
+
+
+<p>
+
+Status:
+
+<span th:text="${order.status}"></span>
+
+</p>
+
+
+
+
+<a href="/books">
+
+Powrót do sklepu
+
+</a>
+
+
+
+</body>
+
+
+</html>
